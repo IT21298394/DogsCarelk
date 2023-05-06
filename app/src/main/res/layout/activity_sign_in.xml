@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/signinBgImg"
+        android:layout_width="475dp"
+        android:layout_height="955dp"
+        android:layout_marginTop="-200dp"
+        android:background="#E5E9F2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pexels_poodles_doodles_1458916_jpg_1"
+        tools:layout_editor_absoluteX="-32dp" />
+
+
+    <EditText
+        android:id="@+id/signinNIC"
+        android:layout_width="@dimen/signin_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:hint="NIC"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signinPw"
+        android:layout_width="@dimen/signin_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/signinNIC" />
+
+    <TextView
+        android:id="@+id/singinRecoveryPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:text="Forget password?"
+        android:textColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signinPw" />
+
+    <TextView
+        android:id="@+id/singinRegisterNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:text="Register Now"
+        android:onClick="fRegisterNow"
+        android:textColor="@color/main_orange"
+        android:textSize="@dimen/MediumText"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/signinNotAMember"
+        app:layout_constraintTop_toBottomOf="@+id/signinLoginBtn" />
+
+    <Button
+        android:id="@+id/signinLoginBtn"
+        android:layout_width="@dimen/Lbutton_Width"
+        android:layout_height="@dimen/Button_Height"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/main_orange"
+        android:text="Login"
+        android:onClick="signinLoginBtn"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColorLink="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singinRecoveryPw" />
+
+    <TextView
+        android:id="@+id/signinHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="56dp"
+        android:text="Sign in"
+        android:textColor="#2E303C"
+        android:textSize="@dimen/HeaderText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signinNotAMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="23dp"
+        android:text="Not a member?"
+        android:textSize="@dimen/NormalText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signinLoginBtn" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="272dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signinHead"
+        app:srcCompat="@drawable/profile_icon" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="31dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signinNIC"
+        app:srcCompat="@drawable/lockpw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

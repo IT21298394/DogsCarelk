@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/mainbackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mainbackground" />
+
+    <TextView
+        android:id="@+id/mainUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="User Name"
+        android:textColor="@color/main_blue"
+        android:textSize="@dimen/HeaderText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/mainLogo" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainLogo"
+        app:srcCompat="@drawable/profile_icon" />
+
+    <ImageView
+        android:id="@+id/mainLogo"
+        android:layout_width="206dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/mainPetRegistration"
+        android:layout_width="@dimen/Main_button_width"
+        android:layout_height="@dimen/Main_button_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/main_orange"
+        android:text="Pet Registration"
+        android:textAllCaps="false"
+        android:textSize="@dimen/MediumText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/mainCalorieCalculator"
+        android:layout_width="@dimen/Main_button_width"
+        android:layout_height="@dimen/Main_button_height"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/main_orange"
+        android:text="Calorie Calculator"
+        android:textAllCaps="false"
+        android:textSize="@dimen/MediumText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainPetRegistration" />
+
+    <Button
+        android:id="@+id/mainEvents"
+        android:layout_width="@dimen/Main_button_width"
+        android:layout_height="@dimen/Main_button_height"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/main_orange"
+        android:text="Event"
+        android:textAllCaps="false"
+        android:textSize="@dimen/MediumText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainPetRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+
+
+    <Button
+        android:id="@+id/mainBMICalculator"
+        android:layout_width="@dimen/Main_button_width"
+        android:layout_height="@dimen/Main_button_height"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/main_orange"
+        android:text="BMI Calculator"
+        android:textAllCaps="false"
+        android:textSize="@dimen/MediumText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainCalorieCalculator"
+        app:layout_constraintTop_toBottomOf="@+id/mainEvents" />
+
+    <ImageView
+        android:id="@+id/mainNotification"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainbackground"
+        app:srcCompat="@drawable/notificationicon" />
+
+    <TextView
+        android:id="@+id/mainRecommended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Recommended"
+        android:textColor="@color/main_blue"
+        android:textSize="@dimen/MediumText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainCalorieCalculator" />
+
+    <ScrollView
+        android:layout_width="323dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/mainRecommended"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/mainAppBar"
+        android:layout_width="411dp"
+        android:layout_height="73dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/main_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="@string/mainBottomBar" />
+
+    <TextView
+        android:id="@+id/mainHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/mainAppBar"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/mainAppBar"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <ImageView
+        android:id="@+id/mainPetvisitIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainAppBar"
+        app:layout_constraintEnd_toEndOf="@+id/mainAppBar"
+        app:layout_constraintStart_toStartOf="@+id/mainAppBar"
+        app:layout_constraintTop_toTopOf="@+id/mainAppBar"
+        app:srcCompat="@drawable/petvisit"
+        android:onClick="visite" />
+
+    <ImageView
+        android:id="@+id/mainUserProfile"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="signIn"
+        app:layout_constraintBottom_toBottomOf="@+id/mainAppBar"
+        app:layout_constraintEnd_toEndOf="@+id/mainAppBar"
+        app:layout_constraintTop_toTopOf="@+id/mainAppBar"
+        app:layout_constraintVertical_bias="0.444"
+        app:srcCompat="@drawable/userprofile" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainAppBar"
+        app:srcCompat="@drawable/baseline_home_24" />
+
+    <TextView
+        android:id="@+id/mainLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Logout"
+        android:onClick="mainLogout"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/mainUserName" />
+
+    <ImageView
+        android:id="@+id/mainSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:onClick="profileSettings"
+        app:layout_constraintStart_toEndOf="@+id/mainLogout"
+        app:layout_constraintTop_toBottomOf="@+id/mainUserName"
+        app:srcCompat="@drawable/profile_settings" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foodCalorieCalculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/foodBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bmibackground" />
+
+    <TextView
+        android:id="@+id/foodHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="56dp"
+        android:text="Food Calories"
+        android:textColor="#2E303C"
+        android:textSize="@dimen/HeaderText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/foodMeat"
+        android:layout_width="@dimen/register_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:hint="Meat (g)"
+        android:inputType="number"
+        android:textSize="@dimen/NormalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodHead" />
+
+    <EditText
+        android:id="@+id/foodEgg"
+        android:layout_width="@dimen/register_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Egg (g)"
+        android:inputType="number"
+        android:textSize="@dimen/NormalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodMeat" />
+
+    <EditText
+        android:id="@+id/foodFish"
+        android:layout_width="@dimen/register_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Fish (g)"
+        android:inputType="number"
+        android:textSize="@dimen/NormalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodEgg" />
+
+    <EditText
+        android:id="@+id/foodYogurt"
+        android:layout_width="@dimen/register_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Yogurt (g)"
+        android:inputType="number"
+        android:textSize="@dimen/NormalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodFish" />
+
+    <EditText
+        android:id="@+id/foodMilk"
+        android:layout_width="@dimen/register_text_width"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Milk (ml)"
+        android:inputType="number"
+        android:textSize="@dimen/NormalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodYogurt" />
+
+    <Button
+        android:id="@+id/foodClear"
+        android:layout_width="@dimen/Sbutton_Width"
+        android:layout_height="@dimen/Button_Height"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#BBC6D5"
+        android:text="Clear"
+        android:onClick="foodCAllClear"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/main_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toEndOf="@+id/foodHead"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/foodCalculate"
+        android:layout_width="@dimen/Lbutton_Width"
+        android:layout_height="@dimen/Button_Height"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/main_orange"
+        android:text="Calculate"
+        android:onClick="foodCCalculate"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodMilk" />
+
+    <TextView
+        android:id="@+id/foodValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="00.0"
+        android:textColor="@color/main_orange"
+        android:textSize="@dimen/H_Text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodCalculate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
