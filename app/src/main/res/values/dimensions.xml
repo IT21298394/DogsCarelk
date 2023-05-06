@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="HeaderText">20sp</dimen>
+    <dimen name="MediumText">16sp</dimen>
+    <dimen name="NormalText">14sp</dimen>
+    <dimen name="register_text_width">300dp</dimen>
+    <dimen name="signin_text_width">247dp</dimen>
+    <dimen name="text_height">43dp</dimen>
+    <dimen name="Lbutton_Width">294dp</dimen>
+    <dimen name="Button_Height">50dp</dimen>
+    <dimen name="Sbutton_Width">100dp</dimen>
+    <dimen name="Main_button_height">120dp</dimen>
+    <dimen name="Main_button_width">160dp</dimen>
+    <dimen name="H_Text">50sp</dimen>
+</resources>
